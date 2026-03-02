@@ -1,0 +1,161 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #ebf1f5;
+  background: #0b1118;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #142133, #0b1118 55%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(880px, 95vw);
+  margin: 0 auto;
+  padding: 22px 0 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.panel {
+  background: #131c28;
+  border: 1px solid #263346;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #98a9bc;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 6px 0;
+}
+
+.muted {
+  color: #96a6b9;
+}
+
+.ghost-btn,
+.choices button,
+.game-over button {
+  border: 1px solid #334761;
+  color: #edf5ff;
+  background: #1e2b3c;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bars {
+  display: grid;
+  gap: 10px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 38px;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-row em {
+  font-size: 11px;
+  color: #90a2b5;
+}
+
+.track {
+  height: 10px;
+  border-radius: 999px;
+  background: #223144;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #43c0ff, #7af2c6);
+}
+
+.card .badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #88a1ba;
+  border: 1px solid #31465f;
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.hint {
+  color: #9fb3ca;
+  font-size: 14px;
+}
+
+.risk-box {
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #2e435c;
+  border-radius: 12px;
+  background: #0f1722;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: #68d9ff;
+}
+
+.risk-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #91a7c0;
+}
+
+.choices {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.log p {
+  color: #b5c4d5;
+  font-size: 14px;
+}
+
+.game-over {
+  border-color: #735261;
+  background: #26161f;
+}
+
+@media (max-width: 640px) {
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
+
+  .choices {
+    grid-template-columns: 1fr;
+  }
+}
